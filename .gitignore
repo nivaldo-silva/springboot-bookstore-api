@@ -1,0 +1,43 @@
+# Ignora o arquivo de ambiente
+.env
+**/.env
+
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Gradle 
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+.gradle/
+.nb-gradle/
+
+# VS Code
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse / Spring Tool Suite (STS)
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated/
+.springBeans/
+.sts4-cache/
+
+# NetBeans
+nbbuild/
+nbdist/
+dist/
+nbproject/private/
+
+# Arquivos de ajuda e temporários
+HELP.md
