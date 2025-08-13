@@ -1,9 +1,9 @@
 
-###  springboot-bookstore-api-restful
+###  Bookstore API
 
 #### Visão Geral
 
-Este projeto implementa um microsserviço para sistema de livraria online, desenvolvido com Spring Boot. A aplicação oferece funcionalidades abrangentes para cadastro e gerenciamento de livros, autores, clientes e pedidos, seguindo rigorosamente boas práticas de desenvolvimento, arquitetura limpa e princípios SOLID.
+Este projeto é uma API RESTful para uma livraria online, desenvolvida com Spring Boot. A aplicação foi construída seguindo as melhores práticas de arquitetura limpa e princípios SOLID, garantindo um sistema robusto e de fácil manutenção.
 
 #### Objetivo do Projeto
 
