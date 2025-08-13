@@ -1,5 +1,5 @@
 
-###  springboot-bookstore-microservice
+###  springboot-bookstore-api-restful
 
 #### Visão Geral
 
