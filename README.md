@@ -10,11 +10,8 @@ Este é um projeto de uma API RESTful para o backend de uma livraria online, des
 O objetivo principal é demonstrar proficiência em desenvolvimento backend com Java, cobrindo tópicos essenciais como:
 
 - Arquitetura REST
-
 - Qualidade e boas práticas de código
-
 - Segurança e validação de dados
-
 - Padrões de design
 
 #### Arquitetura e Design
