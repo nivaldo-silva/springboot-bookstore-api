@@ -1,13 +1,21 @@
 
-###  Bookstore API
+### API Livraria: Backend com Spring Boot
 
 #### Visão Geral
 
-Este projeto é uma API RESTful para uma livraria online, desenvolvida com Spring Boot. A aplicação foi construída seguindo as melhores práticas de arquitetura limpa e princípios SOLID, garantindo um sistema robusto e de fácil manutenção.
+Este é um projeto de uma API RESTful para o backend de uma livraria online, desenvolvida em Java com o framework Spring Boot. A arquitetura foi desenhada com base em Princípios SOLID e Arquitetura Limpa, para criar um sistema desacoplado,robusto, escalável e de fácil manutenção.
 
 #### Objetivo do Projeto
 
-Demonstrar proficiência técnica no ecossistema Java e Spring Boot, com foco em arquitetura REST, qualidade de código, segurança, validação de dados e aplicação de padrões de design consolidados.
+O objetivo principal é demonstrar proficiência em desenvolvimento backend com Java, cobrindo tópicos essenciais como:
+
+- Arquitetura REST
+
+- Qualidade e boas práticas de código
+
+- Segurança e validação de dados
+
+- Padrões de design
 
 #### Arquitetura e Design
 
