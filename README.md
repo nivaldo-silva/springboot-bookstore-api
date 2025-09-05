@@ -11,7 +11,6 @@ API RESTful para sistema de gerenciamento de livraria online desenvolvida com Sp
 - **Gerenciamento de Clientes**: Cadastro de clientes com senhas criptografadas (BCrypt) e gestão de perfil
 - **Sistema de Pedidos**: Criação de pedidos com múltiplos itens, validação automática de estoque e cálculo de totais
 - **Segurança**: Implementação Spring Security com criptografia de senhas
-- **Cache**: Integração Redis para melhor performance
 - **Documentação da API**: Documentação automatizada com Swagger/OpenAPI
 
 ## Stack Tecnológica
@@ -25,7 +24,7 @@ API RESTful para sistema de gerenciamento de livraria online desenvolvida com Sp
 - **Maven** - Gerenciamento de build e dependências
 - **Lombok** - Geração de código
 - **SpringDoc OpenAPI** - Documentação da API
-- **TestContainers** - Testes de integração
+
 
 ## Arquitetura
 
@@ -48,7 +47,6 @@ src/main/java/io/github/nivaldosilva/bookstore/
 - JDK 21+
 - Maven 3.6+
 - MySQL 8.0+
-- Redis (opcional, para cache)
 
 ### Instalação
 
@@ -105,18 +103,6 @@ mvn test
 - `POST /api/orders` - Criar pedido
 - `PUT /api/orders/{id}` - Atualizar status do pedido
 
-## Configuração
-
-A aplicação suporta múltiplos perfis:
-
-- `dev` - Desenvolvimento (padrão)
-- `test` - Testes
-- `prod` - Produção
-
-Ativar um perfil:
-```bash
-mvn spring-boot:run -Dspring-boot.run.profiles=prod
-```
 
 ## Contribuindo
 
