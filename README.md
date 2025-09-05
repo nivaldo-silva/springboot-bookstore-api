@@ -1,160 +1,128 @@
+# API Livraria
 
-### API Livraria: Backend com Spring Boot
+## Visão Geral
 
-#### Visão Geral
+API RESTful para sistema de gerenciamento de livraria online desenvolvida com Spring Boot. A aplicação implementa princípios de Arquitetura Limpa e padrões de design SOLID para garantir manutenibilidade, escalabilidade e testabilidade.
 
-Este é um projeto de uma API RESTful para o backend de uma livraria online, desenvolvida em Java com o framework Spring Boot. A arquitetura foi desenhada com base em Princípios SOLID e Arquitetura Limpa, para criar um sistema desacoplado,robusto, escalável e de fácil manutenção.
+## Funcionalidades
 
-#### Objetivo do Projeto
+- **Gerenciamento de Livros**: Operações CRUD completas com controle de estoque, filtragem por gênero e autor, paginação e ordenação
+- **Gerenciamento de Autores**: Cadastro e manutenção de autores com validação de dados
+- **Gerenciamento de Clientes**: Cadastro de clientes com senhas criptografadas (BCrypt) e gestão de perfil
+- **Sistema de Pedidos**: Criação de pedidos com múltiplos itens, validação automática de estoque e cálculo de totais
+- **Segurança**: Implementação Spring Security com criptografia de senhas
+- **Cache**: Integração Redis para melhor performance
+- **Documentação da API**: Documentação automatizada com Swagger/OpenAPI
 
-O objetivo principal é demonstrar proficiência em desenvolvimento backend com Java, cobrindo tópicos essenciais como:
+## Stack Tecnológica
 
-- Arquitetura REST
-- Qualidade e boas práticas de código
-- Segurança e validação de dados
-- Padrões de design
+- **Java 21** - Linguagem de programação
+- **Spring Boot 3.5.5** - Framework principal
+- **Spring Data JPA** - Persistência de dados
+- **Spring Security** - Framework de segurança
+- **MySQL** - Banco de dados principal
+- **Redis** - Camada de cache
+- **Maven** - Gerenciamento de build e dependências
+- **Lombok** - Geração de código
+- **SpringDoc OpenAPI** - Documentação da API
+- **TestContainers** - Testes de integração
 
-#### Arquitetura e Design
-
-#### Padrões Arquiteturais
-- **Arquitetura em Camadas (MVC)**: Separação clara entre Controlador, Serviço e Repositório
-- **Repository Pattern**: Abstração da camada de acesso a dados
-- **Service Layer Pattern**: Centralização da lógica de negócio
-- **Data Transfer Objects (DTO)**: Transferência segura de dados entre camadas
-
-#### Princípios Aplicados
-- Código limpo e legível
-- Separação clara de responsabilidades
-- Controle transacional robusto
-- Validações abrangentes com Jakarta Validation
-- Tratamento global de exceções
-- Documentação automática com Swagger (SpringDoc OpenAPI)
-
-#### Funcionalidades Principais
-
-#### Gerenciamento de Livros
-- Operações CRUD completas
-- Sistema de filtros por gênero e autor
-- Controle de estoque integrado
-- Paginação e ordenação dinâmica
-
-#### Gerenciamento de Autores
-- Cadastro e manutenção com validação rigorosa de dados
-- Relacionamento com livros publicados
-
-#### Gerenciamento de Clientes
-- Sistema de cadastro com criptografia de senhas (BCrypt)
-- Funcionalidades de atualização de perfil
-- Consultas otimizadas por identificador
-
-#### Sistema de Pedidos
-- Criação de pedidos com múltiplos itens
-- Validação automática de disponibilidade em estoque
-- Cálculo automático de totais
-- Controle transacional para consistência de dados
-
-#### Stack Tecnológica
-
-#### Core
-- **Java 21**: Linguagem principal com recursos modernos
-- **Spring Boot 3.3.x**: Framework principal para desenvolvimento
-- **Spring Data JPA + Hibernate**: Mapeamento objeto-relacional
-- **MySQL 8.0**: Sistema de gerenciamento de banco de dados
-
-#### Segurança e Validação
-- **Spring Security**: Framework de segurança
-- **Bean Validation**: Validação declarativa de dados
-- **BCrypt**: Algoritmo de hash para senhas
-
-#### Ferramentas de Desenvolvimento
-- **Maven**: Gerenciamento de dependências e build
-- **Lombok**: Redução de código boilerplate
-- **SLF4J + Logback**: Sistema de logging
-- **SpringDoc OpenAPI**: Documentação automática de APIs
-
-#### Estrutura do Projeto
+## Arquitetura
 
 ```
-src/main/java/
-├── controller/       # Endpoints REST e controle de requisições
-├── service/          # Implementação das regras de negócio
-├── repository/       # Camada de acesso a dados (JPA)
-├── dto/              # Objetos de transferência de dados
-├── entity/           # Entidades do modelo de domínio
-├── config/           # Configurações do Spring Framework
-└── exception/        # Tratamento centralizado de exceções
+src/main/java/io/github/nivaldosilva/bookstore/
+├── controllers/      # Endpoints REST
+├── services/         # Camada de lógica de negócio
+├── repositories/     # Camada de acesso a dados
+├── entities/         # Entidades do domínio
+├── dtos/            # Objetos de transferência de dados
+├── mappers/         # Mapeadores Entity-DTO
+├── config/          # Configurações do Spring
+└── exceptions/      # Tratamento global de exceções
 ```
 
-#### Benefícios da Arquitetura
+## Início Rápido
 
-#### Manutenibilidade
-- Código bem estruturado e de fácil compreensão
-- Separação clara de responsabilidades
-- Documentação integrada e atualizada automaticamente
+### Pré-requisitos
 
-#### Escalabilidade
-- Arquitetura preparada para crescimento horizontal
-- Componentes desacoplados e independentes
-- Padrões que facilitam a expansão de funcionalidades
+- JDK 21+
+- Maven 3.6+
+- MySQL 8.0+
+- Redis (opcional, para cache)
 
-#### Testabilidade
-- Camadas isoladas e testáveis independentemente
-- Injeção de dependências facilitando mock e stub
-- Cobertura de testes simplificada
+### Instalação
 
-#### Reutilização
-- Componentes modulares e bem definidos
-- Interfaces claras entre camadas
-- Código reutilizável em diferentes contextos
-
-#### Configuração e Execução
-
-#### Pré-requisitos
-- Java Development Kit (JDK) 21 ou superior
-- Apache Maven 3.6 ou superior
-- MySQL 8.0 ou Docker para containerização
-- Docker (opcional, para ambiente containerizado)
-
-#### Instruções de Instalação
-
-1. **Clone do repositório**
+1. **Clone o repositório**
    ```bash
-   git clone https://github.com/nivaldo-silva/bookstore-microservice.git
-   cd bookstore-microservice
+   git clone https://github.com/nivaldo-silva/bookstore-backend-api.git
+   cd bookstore
    ```
 
-2. **Configuração do banco de dados**
-   - Configure as credenciais do MySQL no arquivo `application.yaml`
-   - Certifique-se de que o banco de dados esteja em execução
+2. **Configuração do Banco de Dados**
+   - Crie um banco de dados MySQL
+   - Atualize `src/main/resources/application.yml` com suas credenciais do banco
 
-3. **Execução da aplicação**
+3. **Execute a aplicação**
    ```bash
    mvn spring-boot:run
    ```
 
-4. **Acesso à documentação**
-   - Interface Swagger UI: `http://localhost:8080/swagger-ui.html`
-   - Especificação OpenAPI: `http://localhost:8080/v3/api-docs`
+4. **Acesse a Documentação da API**
+   - Swagger UI: http://localhost:8080/swagger-ui.html
+   - Especificação OpenAPI: http://localhost:8080/v3/api-docs
 
-#### Documentação da API
+### Testes
 
-A documentação completa da API está disponível através do Swagger UI, incluindo:
-- Especificação detalhada de todos os endpoints
-- Modelos de dados com exemplos
-- Códigos de resposta e tratamento de erros
-- Interface interativa para testes
+```bash
+# Executar testes unitários
+mvn test
 
-#### Contribuição
+## Endpoints da API
 
-Este projeto segue padrões de código estabelecidos e práticas de desenvolvimento profissional. Contribuições são bem-vindas mediante pull requests que mantenham a qualidade e consistência do código existente.
+### Livros
+- `GET /api/books` - Listar livros com paginação e filtros
+- `GET /api/books/{id}` - Buscar livro por ID
+- `POST /api/books` - Criar novo livro
+- `PUT /api/books/{id}` - Atualizar livro
+- `DELETE /api/books/{id}` - Excluir livro
 
+### Autores
+- `GET /api/authors` - Listar autores
+- `GET /api/authors/{id}` - Buscar autor por ID
+- `POST /api/authors` - Criar autor
+- `PUT /api/authors/{id}` - Atualizar autor
+- `DELETE /api/authors/{id}` - Excluir autor
 
+### Clientes
+- `GET /api/customers` - Listar clientes
+- `GET /api/customers/{id}` - Buscar cliente por ID
+- `POST /api/customers` - Registrar cliente
+- `PUT /api/customers/{id}` - Atualizar cliente
 
+### Pedidos
+- `GET /api/orders` - Listar pedidos
+- `GET /api/orders/{id}` - Buscar pedido por ID
+- `POST /api/orders` - Criar pedido
+- `PUT /api/orders/{id}` - Atualizar status do pedido
 
+## Configuração
 
+A aplicação suporta múltiplos perfis:
 
+- `dev` - Desenvolvimento (padrão)
+- `test` - Testes
+- `prod` - Produção
 
+Ativar um perfil:
+```bash
+mvn spring-boot:run -Dspring-boot.run.profiles=prod
+```
 
+## Contribuindo
 
-
-
+1. Faça um fork do repositório
+2. Crie uma branch para sua funcionalidade
+3. Faça suas alterações
+4. Adicione testes para novas funcionalidades
+5. Certifique-se de que todos os testes passem
+6. Envie um pull request

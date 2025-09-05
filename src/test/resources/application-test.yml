@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: bookstore-test
+    
+  # Configuração será sobrescrita pelo Testcontainers
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+    
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: org.hibernate.dialect.H2Dialect
+        
+  sql:
+    init:
+      mode: never  # Não executa scripts SQL em testes
+      
+  # Desabilita cache Redis em testes
+  cache:
+    type: none
+    
+  # Configuração de logging para testes
+logging:
+  level:
+    root: WARN
+    io.github.nivaldosilva.bookstore: INFO
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+    
+# Desabilita métricas e atuador em testes
+management:
+  endpoints:
+    enabled-by-default: false

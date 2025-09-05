@@ -27,6 +27,7 @@ public class AuthorServiceImpl implements AuthorService {
         if (authorRepository.existsByName(request.name())) {
             throw new AuthorNameAlreadyExistsException();
         }
+        
         Author author = AuthorMapper.toEntity(request);
         Author savedAuthor = authorRepository.save(author);
         return AuthorMapper.toResponse(savedAuthor);

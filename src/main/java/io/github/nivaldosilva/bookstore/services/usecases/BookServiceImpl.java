@@ -108,7 +108,6 @@ public class BookServiceImpl implements BookService {
         return BookMapper.toResponse(updatedBook);
     }
 
-
     @Override
     @Transactional
     public void deleteBook(UUID id) {
@@ -116,6 +115,6 @@ public class BookServiceImpl implements BookService {
             throw new BookNotFoundException();
         }
         bookRepository.deleteById(id);
-    }          
+    }
 
 }
