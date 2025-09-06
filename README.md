@@ -2,7 +2,7 @@
 
 ## Sobre o Projeto
 
-API RESTful empresarial desenvolvida com arquitetura moderna para gerenciamento completo de livraria digital. O projeto implementa padrões arquiteturais avançados e práticas de desenvolvimento profissional, demonstrando excelência técnica em desenvolvimento de software.
+API RESTful para livraria online em Java 21 + Spring Boot com arquitetura limpa, Spring Data JPA/MySQL, Spring Security, Swagger e padrões enterprise.
 
 ## Arquitetura e Padrões
 
