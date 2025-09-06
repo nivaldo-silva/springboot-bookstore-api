@@ -134,7 +134,7 @@ class BookServiceImplTest {
     @Test
     @DisplayName("Should throw AuthorNotFoundException when author not found")
     void shouldThrowAuthorNotFoundExceptionWhenAuthorNotFound() {
-        // Given
+       
         when(bookRepository.existsByIsbn(bookRequest.isbn())).thenReturn(false);
         when(authorRepository.findById(authorId)).thenReturn(Optional.empty());
 
