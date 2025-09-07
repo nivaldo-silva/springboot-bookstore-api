@@ -82,7 +82,7 @@ src/main/java/io/github/nivaldosilva/bookstore/
 
 1. Clone o repositório
 ```bash
-git clone https://github.com/nivaldo-silva/bookstore-backend-api.git
+git clone https://github.com/nivaldo-silva/springboot-bookstore-api.git
 cd bookstore
 ```
 
