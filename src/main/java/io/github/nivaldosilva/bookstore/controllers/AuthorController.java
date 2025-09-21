@@ -32,8 +32,7 @@ public class AuthorController {
     @ApiResponse(responseCode = "400", description = "Dados inválidos fornecidos.")
     @ApiResponse(responseCode = "409", description = "Autor com o nome já existe.")
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<AuthorResponse> createAuthor(
-            @Parameter(description = "Dados do autor a ser criado", required = true) @Valid @RequestBody AuthorRequest authorRequest) {
+    public ResponseEntity<AuthorResponse> createAuthor(@Parameter(description = "Dados do autor a ser criado", required = true) @Valid @RequestBody AuthorRequest authorRequest) {
         logger.info("Starting author creation for name: {}", authorRequest.name());
         AuthorResponse createdAuthor = authorService.createAuthor(authorRequest);
         logger.info("Author created successfully.");
