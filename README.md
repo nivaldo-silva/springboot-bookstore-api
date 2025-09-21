@@ -10,7 +10,7 @@
 
 Esta é uma API RESTful robusta para o gerenciamento de uma livraria online, desenvolvida com as tecnologias mais modernas do ecossistema Java e Spring. O projeto foi construído com foco em **Clean Architecture** e **SOLID**, resultando em um código desacoplado, testável e de fácil manutenção.
 
-Este projeto não é apenas um CRUD. Ele foi desenhado para ser uma aplicação de nível profissional, demonstrando práticas de desenvolvimento de software de alta qualidade, ideal para ser apresentado em portfólios para recrutadores e equipes de tecnologia.
+Este projeto não é apenas um CRUD. Ele foi desenhado para ser uma aplicação de nível profissional, demonstrando práticas de desenvolvimento de software de alta qualidade.
 
 ## 🎯 Objetivos do Projeto
 
@@ -151,8 +151,3 @@ Contribuições são o que tornam a comunidade de código aberto um lugar incrí
 4.  Faça o Push para a Branch (`git push origin feature/AmazingFeature`)
 5.  Abra um Pull Request
 
-## 👨‍💻 Contato
-
-Nivaldo Silva - [nivaldo@example.com](mailto:nivaldo@example.com)
-
-Link do Projeto: [https://github.com/nivaldosilva/bookstore](https://github.com/nivaldosilva/bookstore)
